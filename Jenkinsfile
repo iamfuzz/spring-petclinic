@@ -12,6 +12,10 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
+		snykSecurity(
+          		snykInstallation: 'iamfuzz',
+          		snykTokenId: 'iamfuzz-token',
+        		)
             }
         }
         stage('Deploy') {
