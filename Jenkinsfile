@@ -16,6 +16,7 @@ pipeline {
           		snykInstallation: 'iamfuzz',
           		snykTokenId: 'iamfuzz-token',
         		)
+		//Add other steps here
             }
         }
         stage('Deploy') {
