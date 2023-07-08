@@ -4,9 +4,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building Docker Image..'
-		chmod +X mvnw
-		./mvnw spring-boot:build-image
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
             }
         }
         stage('Deploy') {
