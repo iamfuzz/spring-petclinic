@@ -5,6 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+		chmod +X mvnw
+		./mvnw spring-boot:build-image
             }
         }
         stage('Test') {
